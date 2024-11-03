@@ -18,6 +18,7 @@ const linkReplacementRules: Record<string, string> = {
   "twitter.com": "fxtwitter.com",
   "x.com": "fixupx.com",
   "instagram.com": "ddinstagram.com",
+  "reddit.com": "rxddit.com",
 };
 
 function replaceLink(url: string): string {
@@ -33,7 +34,7 @@ function replaceLink(url: string): string {
 }
 
 function extractUrls(text: string): string[] {
-  const query = text.trim().split("\n").map((x) => x.trim());
+  const query = text.split("\n").map((x) => x.trim());
 
   const urls: string[] = [];
 
@@ -91,7 +92,6 @@ bot.on("inline_query", async (ctx) => {
 
   if (query) {
     const urls = extractUrls(query);
-    console.log(urls);
 
     const results = urls.map((url, index) => {
       const modifiedUrl = replaceLink(url);

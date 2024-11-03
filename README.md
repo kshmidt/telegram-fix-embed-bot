@@ -1,12 +1,12 @@
 # Telegram Fix Embed bot
-This bot replaces links with versions that provides embed view
-previews of videos and media in group chats.
+This bot fixes embed preview for social media links.
 
 You can add it to your group chat by [@FxEmbedBot](https://t.me/FxEmbedBot)
 
 # Link support
 - Instagram (via [InstaFix](https://ddinstagram.com/))
 - X/Twitter (via [FxTwitter](https://github.com/FixTweet/FxTwitter))
+- Reddit (via [fxreddit](https://github.com/MinnDevelopment/fxreddit))
 
 ## Prerequisites
 - [Deno](https://deno.land/)
