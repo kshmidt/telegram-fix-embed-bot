@@ -18,6 +18,8 @@ const linkReplacementRules: Record<string, string> = {
   "twitter.com": "fxtwitter.com",
   "x.com": "fixupx.com",
   "instagram.com": "ddinstagram.com",
+  "tiktok.com": "vxtiktok.com",
+  "vm.tiktok.com": "vm.vxtiktok.com",
   "reddit.com": "rxddit.com",
 };
 

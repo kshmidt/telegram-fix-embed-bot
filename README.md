@@ -6,6 +6,7 @@ You can add it to your group chat by [@FxEmbedBot](https://t.me/FxEmbedBot)
 # Link support
 - Instagram (via [InstaFix](https://ddinstagram.com/))
 - X/Twitter (via [FxTwitter](https://github.com/FixTweet/FxTwitter))
+- Tiktok (via [vxtiktok](https://github.com/dylanpdx/vxtiktok))
 - Reddit (via [fxreddit](https://github.com/MinnDevelopment/fxreddit))
 
 ## Prerequisites
