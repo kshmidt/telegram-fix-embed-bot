@@ -89,7 +89,6 @@ bot.on("message:text", async (ctx) => {
 bot.on("inline_query", async (ctx) => {
   const query = ctx.inlineQuery.query.trim();
 
-  console.log("Query:", query);
   if (query) {
     const urls = extractUrls(query);
     console.log(urls);
