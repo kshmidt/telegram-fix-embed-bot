@@ -23,7 +23,7 @@ const linkReplacementRules: Record<string, string> = {
   "reddit.com": "rxddit.com",
 };
 
-function replaceLink(url: string): string {
+const replaceLink = (url: string): string => {
   for (
     const [originalDomain, newDomain] of Object.entries(linkReplacementRules)
   ) {
@@ -33,9 +33,9 @@ function replaceLink(url: string): string {
     }
   }
   return url;
-}
+};
 
-function extractUrls(text: string): string[] {
+const extractUrls = (text: string): string[] => {
   const query = text.split("\n").map((x) => x.trim());
 
   const urls: string[] = [];
@@ -68,7 +68,10 @@ function extractUrls(text: string): string[] {
   }
 
   return urls;
-}
+};
+
+const getReplyText = (url: string, modifiedUrl: string): string =>
+  `<a href="${modifiedUrl}">${modifiedUrl}</a>\n\n(<a href="${url}">Original</a>)`;
 
 const bot = new Bot(token);
 
@@ -82,7 +85,11 @@ bot.on("message:text", async (ctx) => {
       const modifiedUrl = replaceLink(url);
 
       if (modifiedUrl !== url) {
-        await ctx.reply(modifiedUrl)
+        const replyText = getReplyText(url, modifiedUrl);
+        await ctx.reply(replyText, {
+          disable_notification: true,
+          parse_mode: "HTML",
+        })
           .catch((error) => console.error("Failed to send message:", error));
       }
     }
@@ -97,11 +104,14 @@ bot.on("inline_query", async (ctx) => {
 
     const results = urls.map((url, index) => {
       const modifiedUrl = replaceLink(url);
+      const replyText = getReplyText(url, modifiedUrl);
 
       return InlineQueryResultBuilder
         .article(String(index), "Modified link", {
           description: modifiedUrl,
-        }).text(modifiedUrl);
+        }).text(replyText, {
+          parse_mode: "HTML",
+        });
     });
 
     await ctx.answerInlineQuery(results).catch(
