@@ -3,7 +3,7 @@ This bot fixes embed preview for social media links.
 
 You can add it to your group chat by [@FxEmbedBot](https://t.me/FxEmbedBot)
 
-# Link support
+## Link support
 - Instagram (via [InstaFix](https://ddinstagram.com/))
 - X/Twitter (via [FxTwitter](https://github.com/FixTweet/FxTwitter))
 - Tiktok (via [vxtiktok](https://github.com/dylanpdx/vxtiktok))
