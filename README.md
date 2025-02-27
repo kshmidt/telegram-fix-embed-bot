@@ -4,10 +4,11 @@ This bot fixes embed preview for social media links.
 You can add it to your group chat by [@FxEmbedBot](https://t.me/FxEmbedBot)
 
 ## Link support
-- Instagram (via [InstaFix](https://ddinstagram.com/))
+- Instagram (via [InstaFix](https://github.com/Wikidepia/InstaFix))
+- TikTok (via [vxtiktok](https://github.com/dylanpdx/vxtiktok))
 - X/Twitter (via [FxTwitter](https://github.com/FixTweet/FxTwitter))
-- Tiktok (via [vxtiktok](https://github.com/dylanpdx/vxtiktok))
 - Reddit (via [fxreddit](https://github.com/MinnDevelopment/fxreddit))
+- 9GAG (via [fx9gag](https://github.com/kxalex/fx9gag))
 
 ## Prerequisites
 - [Deno](https://deno.land/)
@@ -28,19 +29,19 @@ You can add it to your group chat by [@FxEmbedBot](https://t.me/FxEmbedBot)
 
 ## Usage
 
-To start the bot in development mode with file watching:
+To start in development mode with file watching:
 
 ```sh
 deno task dev
 ```
 
-To start the bot in production mode:
+To start in production mode:
 
 ```sh
 deno task start
 ```
 
-To compile the bot:
+To compile the executable:
 
 ```sh
 deno task compile

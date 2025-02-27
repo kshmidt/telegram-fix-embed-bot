@@ -15,12 +15,13 @@ if (!token) {
 }
 
 const linkReplacementRules: Record<string, string> = {
-  "twitter.com": "fxtwitter.com",
-  "x.com": "fixupx.com",
   "instagram.com": "ddinstagram.com",
   "tiktok.com": "vxtiktok.com",
   "vm.tiktok.com": "vm.vxtiktok.com",
+  "twitter.com": "fxtwitter.com",
+  "x.com": "fixupx.com",
   "reddit.com": "rxddit.com",
+  "9gag.com": "fx9gag.com",
 };
 
 const replaceLink = (url: string): string => {
